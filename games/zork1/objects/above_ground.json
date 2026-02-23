@@ -1,0 +1,27 @@
+[
+  {
+    "id": "mailbox",
+    "name": "small mailbox",
+    "aliases": ["mailbox", "box"],
+    "description": {
+      "room": "There is a small mailbox here.",
+      "examine": "The small mailbox is a small white mailbox with a red flag.",
+      "on_open": "Opening the small mailbox reveals a leaflet."
+    },
+    "location": "west_of_house",
+    "properties": ["openable", "container"],
+    "capacity": 5
+  },
+  {
+    "id": "leaflet",
+    "name": "leaflet",
+    "aliases": ["paper", "pamphlet"],
+    "description": {
+      "room": "There is a leaflet here.",
+      "examine": "A small leaflet.",
+      "on_read": "\"WELCOME TO ZORK!\n\nZORK is a game of adventure, danger, and low cunning. In it you will explore some of the most amazing territory ever seen by mortals. No computer should be without one!\""
+    },
+    "parent_object": "mailbox",
+    "properties": ["takeable", "readable"]
+  }
+]

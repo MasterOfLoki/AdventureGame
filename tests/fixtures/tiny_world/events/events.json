@@ -1,0 +1,16 @@
+[
+  {
+    "id": "unlock_door",
+    "trigger": "after_action",
+    "conditions": [
+      {"type": "action_is", "target": "unlock"},
+      {"type": "player_has_item", "target": "key"},
+      {"type": "player_in_room", "target": "east_room"}
+    ],
+    "effects": [
+      {"type": "set_flag", "target": "door_unlocked"},
+      {"type": "print_message", "value": "You unlock the door with the brass key."}
+    ],
+    "once": true
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "guard",
+    "name": "guard",
+    "aliases": ["soldier"],
+    "description": "A burly guard stands here.",
+    "location": "east_room",
+    "attitude": "hostile",
+    "health": 5,
+    "max_health": 5,
+    "damage": 2,
+    "behavior": {
+      "combat_messages": {
+        "counter": "The guard swings his fist!",
+        "miss": "The guard stumbles!",
+        "hit": "The guard punches you!"
+      }
+    },
+    "death_message": "The guard falls to the ground.",
+    "death_flag": "guard_dead"
+  }
+]

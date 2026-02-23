@@ -1,0 +1,97 @@
+[
+  {
+    "id": "key",
+    "name": "brass key",
+    "aliases": ["key"],
+    "description": {
+      "room": "There is a brass key here.",
+      "examine": "A small brass key."
+    },
+    "location": "start_room",
+    "properties": ["takeable"]
+  },
+  {
+    "id": "box",
+    "name": "wooden box",
+    "aliases": ["box", "chest"],
+    "description": {
+      "room": "There is a wooden box here.",
+      "examine": "A sturdy wooden box.",
+      "on_open": "Opening the box reveals a gold coin!"
+    },
+    "location": "start_room",
+    "properties": ["openable", "container"],
+    "capacity": 5
+  },
+  {
+    "id": "coin",
+    "name": "gold coin",
+    "aliases": ["coin", "gold"],
+    "description": {
+      "room": "There is a gold coin here.",
+      "examine": "A shiny gold coin."
+    },
+    "parent_object": "box",
+    "properties": ["takeable"],
+    "score_value": 5
+  },
+  {
+    "id": "lamp",
+    "name": "lamp",
+    "aliases": ["lantern", "light"],
+    "description": {
+      "room": "There is a lamp here.",
+      "examine": "A battery-powered lamp."
+    },
+    "location": "start_room",
+    "properties": ["takeable", "light_source"],
+    "light_fuel": 50
+  },
+  {
+    "id": "sword",
+    "name": "sword",
+    "aliases": ["blade"],
+    "description": {
+      "room": "There is a sword here.",
+      "examine": "A sharp sword."
+    },
+    "location": "east_room",
+    "properties": ["takeable", "weapon"],
+    "damage": 5
+  },
+  {
+    "id": "apple",
+    "name": "apple",
+    "aliases": ["fruit"],
+    "description": {
+      "room": "There is an apple here.",
+      "examine": "A ripe red apple."
+    },
+    "location": "start_room",
+    "properties": ["takeable", "edible"]
+  },
+  {
+    "id": "book",
+    "name": "book",
+    "aliases": ["tome"],
+    "description": {
+      "room": "There is a book here.",
+      "examine": "An old book with strange symbols.",
+      "on_read": "The book reads: 'The treasure lies beyond the dark.'"
+    },
+    "location": "east_room",
+    "properties": ["takeable", "readable"]
+  },
+  {
+    "id": "trophy_case",
+    "name": "trophy case",
+    "aliases": ["case"],
+    "description": {
+      "room": "There is a trophy case here.",
+      "examine": "A glass trophy case."
+    },
+    "location": "start_room",
+    "properties": ["openable", "container", "transparent", "fixed"],
+    "capacity": 20
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "look",
+    "names": ["look", "l"],
+    "description": "Look around the current room"
+  },
+  {
+    "id": "examine",
+    "names": ["examine", "x", "inspect", "look at"],
+    "description": "Examine an object closely",
+    "syntax": [{"pattern": "examine {object}", "requires_direct_object": true}]
+  },
+  {
+    "id": "go",
+    "names": ["go", "walk", "run"],
+    "description": "Move in a direction",
+    "syntax": [{"pattern": "go {direction}"}]
+  },
+  {
+    "id": "take",
+    "names": ["take", "get", "grab", "pick up"],
+    "description": "Pick up an object",
+    "syntax": [{"pattern": "take {object}", "requires_direct_object": true}],
+    "requires_object_property": "takeable"
+  },
+  {
+    "id": "take_from",
+    "names": ["take from"],
+    "description": "Take an object from a container",
+    "syntax": [{"pattern": "take {object} from {container}", "requires_direct_object": true, "requires_indirect_object": true, "prepositions": ["from"]}]
+  },
+  {
+    "id": "drop",
+    "names": ["drop", "throw", "discard"],
+    "description": "Drop an object",
+    "syntax": [{"pattern": "drop {object}", "requires_direct_object": true}]
+  },
+  {
+    "id": "inventory",
+    "names": ["inventory", "i", "inv"],
+    "description": "Check what you are carrying"
+  },
+  {
+    "id": "open",
+    "names": ["open"],
+    "description": "Open a container or door",
+    "syntax": [{"pattern": "open {object}", "requires_direct_object": true}],
+    "requires_object_property": "openable"
+  },
+  {
+    "id": "close",
+    "names": ["close", "shut"],
+    "description": "Close a container or door",
+    "syntax": [{"pattern": "close {object}", "requires_direct_object": true}],
+    "requires_object_property": "openable"
+  },
+  {
+    "id": "turn_on",
+    "names": ["turn on", "light", "activate"],
+    "description": "Turn on an object",
+    "syntax": [{"pattern": "turn on {object}", "requires_direct_object": true}]
+  },
+  {
+    "id": "turn_off",
+    "names": ["turn off", "extinguish", "deactivate"],
+    "description": "Turn off an object",
+    "syntax": [{"pattern": "turn off {object}", "requires_direct_object": true}]
+  },
+  {
+    "id": "put",
+    "names": ["put", "place", "insert"],
+    "description": "Put an object in/on a container",
+    "syntax": [{"pattern": "put {object} in {container}", "requires_direct_object": true, "requires_indirect_object": true, "prepositions": ["in", "on", "into", "onto"]}]
+  },
+  {
+    "id": "unlock",
+    "names": ["unlock"],
+    "description": "Unlock a locked object",
+    "syntax": [{"pattern": "unlock {object} with {key}", "requires_direct_object": true, "prepositions": ["with"]}]
+  },
+  {
+    "id": "read",
+    "names": ["read"],
+    "description": "Read something",
+    "syntax": [{"pattern": "read {object}", "requires_direct_object": true}],
+    "requires_object_property": "readable"
+  },
+  {
+    "id": "eat",
+    "names": ["eat", "drink", "consume"],
+    "description": "Eat or drink something",
+    "syntax": [{"pattern": "eat {object}", "requires_direct_object": true}],
+    "requires_object_property": "edible"
+  },
+  {
+    "id": "attack",
+    "names": ["attack", "kill", "hit", "fight", "strike"],
+    "description": "Attack something",
+    "syntax": [{"pattern": "attack {target}", "requires_direct_object": true}, {"pattern": "attack {target} with {weapon}", "requires_direct_object": true, "requires_indirect_object": true, "prepositions": ["with"]}]
+  },
+  {
+    "id": "move",
+    "names": ["move", "push", "pull", "lift"],
+    "description": "Move an object",
+    "syntax": [{"pattern": "move {object}", "requires_direct_object": true}]
+  },
+  {
+    "id": "wait",
+    "names": ["wait", "z"],
+    "description": "Wait a turn"
+  },
+  {
+    "id": "score",
+    "names": ["score"],
+    "description": "Check your score"
+  },
+  {
+    "id": "quit",
+    "names": ["quit", "q"],
+    "description": "Quit the game"
+  },
+  {
+    "id": "save",
+    "names": ["save"],
+    "description": "Save the game"
+  },
+  {
+    "id": "restore",
+    "names": ["restore", "load"],
+    "description": "Restore a saved game"
+  }
+]

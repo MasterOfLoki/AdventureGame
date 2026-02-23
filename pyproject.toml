@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "adventure-game"
+version = "0.1.0"
+description = "A text adventure game engine with LLM-powered natural language parsing"
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2.0",
+    "rich>=13.0",
+    "eval_type_backport>=0.2.0; python_version < '3.10'",
+]
+
+[project.optional-dependencies]
+llm = [
+    "llama-cpp-python>=0.2.0",
+]
+voice = [
+    "faster-whisper>=0.9.0",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+adventure = "cli.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools.packages.find]
+include = ["engine*", "cli*"]

@@ -1,0 +1,13 @@
+{
+  "title": "Tiny World",
+  "author": "Test",
+  "version": "1.0",
+  "starting_room": "start_room",
+  "max_score": 10,
+  "max_inventory_size": 5,
+  "ranks": {
+    "0": "Beginner",
+    "5": "Adventurer",
+    "10": "Master"
+  }
+}

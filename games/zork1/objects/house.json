@@ -1,0 +1,117 @@
+[
+  {
+    "id": "brown_sack",
+    "name": "brown sack",
+    "aliases": ["sack", "bag"],
+    "description": {
+      "room": "On the table is an elongated brown sack, smelling of hot peppers.",
+      "examine": "The brown sack is an elongated brown sack, smelling of hot peppers."
+    },
+    "location": "kitchen",
+    "properties": ["takeable", "openable", "container"],
+    "capacity": 5
+  },
+  {
+    "id": "garlic",
+    "name": "clove of garlic",
+    "aliases": ["garlic", "clove"],
+    "description": {
+      "room": "There is a clove of garlic here.",
+      "examine": "A clove of garlic."
+    },
+    "parent_object": "brown_sack",
+    "properties": ["takeable", "edible"]
+  },
+  {
+    "id": "bottle_of_water",
+    "name": "glass bottle",
+    "aliases": ["bottle", "water"],
+    "description": {
+      "room": "There is a glass bottle here.",
+      "examine": "The glass bottle contains a quantity of water."
+    },
+    "location": "kitchen",
+    "properties": ["takeable", "openable", "container", "transparent"]
+  },
+  {
+    "id": "trophy_case",
+    "name": "trophy case",
+    "aliases": ["case"],
+    "description": {
+      "room": "There is a trophy case here.",
+      "examine": "A handsome trophy case."
+    },
+    "location": "living_room",
+    "properties": ["openable", "container", "transparent", "fixed"],
+    "capacity": 100
+  },
+  {
+    "id": "oriental_rug",
+    "name": "oriental rug",
+    "aliases": ["rug", "carpet"],
+    "description": {
+      "room": "",
+      "examine": "The rug is extremely beautiful and covers a trapdoor in the floor. Under the carpet you see a closed trapdoor."
+    },
+    "location": "living_room",
+    "properties": ["scenery", "fixed"]
+  },
+  {
+    "id": "trapdoor",
+    "name": "trap door",
+    "aliases": ["trapdoor", "door", "trap"],
+    "description": {
+      "room": "",
+      "examine": "The trapdoor is wooden and quite solid."
+    },
+    "location": "living_room",
+    "properties": ["openable", "fixed", "hidden"]
+  },
+  {
+    "id": "brass_lantern",
+    "name": "brass lantern",
+    "aliases": ["lantern", "lamp", "light"],
+    "description": {
+      "room": "A battery-powered brass lantern is on the trophy case.",
+      "examine": "The brass lantern is battery-powered."
+    },
+    "location": "living_room",
+    "properties": ["takeable", "light_source"],
+    "light_fuel": 400
+  },
+  {
+    "id": "elvish_sword",
+    "name": "elvish sword",
+    "aliases": ["sword", "blade"],
+    "description": {
+      "room": "Above the trophy case hangs an elvish sword of great antiquity.",
+      "examine": "The sword is an ancient elvish weapon. It glows faintly blue."
+    },
+    "location": "living_room",
+    "properties": ["takeable", "weapon"],
+    "damage": 5
+  },
+  {
+    "id": "rope",
+    "name": "rope",
+    "aliases": ["coil", "coil of rope"],
+    "description": {
+      "room": "A large coil of rope is lying in the corner.",
+      "examine": "A large coil of sturdy rope."
+    },
+    "location": "attic",
+    "properties": ["takeable"]
+  },
+  {
+    "id": "nasty_knife",
+    "name": "nasty knife",
+    "aliases": ["knife"],
+    "description": {
+      "room": "On a table is a nasty-looking knife.",
+      "examine": "A nasty-looking knife. It looks sharp."
+    },
+    "location": "attic",
+    "properties": ["takeable", "weapon"],
+    "damage": 2
+  }
+]

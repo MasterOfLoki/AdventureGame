@@ -1,0 +1,38 @@
+[
+  {
+    "id": "start_room",
+    "name": "Start Room",
+    "description": "A simple room. Exits lead north and east.",
+    "short_description": "The start room.",
+    "exits": [
+      {"direction": "north", "target_room": "north_room"},
+      {"direction": "east", "target_room": "east_room"}
+    ]
+  },
+  {
+    "id": "north_room",
+    "name": "North Room",
+    "description": "A dark room to the north.",
+    "short_description": "The north room.",
+    "is_dark": true,
+    "exits": [
+      {"direction": "south", "target_room": "start_room"}
+    ]
+  },
+  {
+    "id": "east_room",
+    "name": "East Room",
+    "description": "A bright room to the east.",
+    "exits": [
+      {"direction": "west", "target_room": "start_room"},
+      {
+        "direction": "north",
+        "target_room": "north_room",
+        "condition": {
+          "flag": "door_unlocked",
+          "message_if_blocked": "The door is locked."
+        }
+      }
+    ]
+  }
+]

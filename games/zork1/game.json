@@ -1,0 +1,20 @@
+{
+  "title": "ZORK I: The Great Underground Empire",
+  "author": "Infocom (recreation)",
+  "version": "0.1",
+  "description": "You are standing in an open field west of a white house, with a boarded front door. There is a small mailbox here.",
+  "starting_room": "west_of_house",
+  "intro_text": "ZORK I: The Great Underground Empire\nCopyright (c) 1981, 1982, 1983 Infocom, Inc. All rights reserved.\nZORK is a registered trademark of Infocom, Inc.\nRevision 88 / Serial number 840726\n",
+  "max_score": 350,
+  "max_inventory_size": 8,
+  "ranks": {
+    "0": "Beginner",
+    "25": "Amateur Adventurer",
+    "50": "Novice Adventurer",
+    "100": "Junior Adventurer",
+    "200": "Adventurer",
+    "300": "Master Adventurer",
+    "330": "Wizard",
+    "350": "Master"
+  }
+}

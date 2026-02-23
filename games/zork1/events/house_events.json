@@ -1,0 +1,63 @@
+[
+  {
+    "id": "move_rug",
+    "trigger": "after_action",
+    "conditions": [
+      {"type": "action_is", "target": "move"},
+      {"type": "action_target_is", "target": "oriental_rug"},
+      {"type": "flag_not_set", "target": "rug_moved"}
+    ],
+    "effects": [
+      {"type": "print_message", "value": "With a great effort, the rug is moved to one side of the room, revealing the dusty cover of a closed trapdoor."},
+      {"type": "set_flag", "target": "rug_moved"},
+      {"type": "reveal_object", "target": "trapdoor"},
+      {"type": "replace_action_message", "value": ""}
+    ],
+    "once": true,
+    "priority": 10
+  },
+  {
+    "id": "open_trapdoor",
+    "trigger": "after_action",
+    "conditions": [
+      {"type": "action_is", "target": "open"},
+      {"type": "action_target_is", "target": "trapdoor"},
+      {"type": "flag_set", "target": "rug_moved"}
+    ],
+    "effects": [
+      {"type": "set_flag", "target": "trapdoor_open"},
+      {"type": "enable_exit", "target": "living_room", "value": "down"},
+      {"type": "print_message", "value": "The trapdoor opens to reveal a rickety staircase descending into darkness."}
+    ],
+    "once": true,
+    "priority": 10
+  },
+  {
+    "id": "close_trapdoor",
+    "trigger": "after_action",
+    "conditions": [
+      {"type": "action_is", "target": "close"},
+      {"type": "action_target_is", "target": "trapdoor"}
+    ],
+    "effects": [
+      {"type": "clear_flag", "target": "trapdoor_open"},
+      {"type": "print_message", "value": "The trapdoor is now closed."}
+    ],
+    "priority": 10
+  },
+  {
+    "id": "cellar_trapdoor_closes",
+    "trigger": "enter_room",
+    "conditions": [
+      {"type": "player_in_room", "target": "cellar"},
+      {"type": "flag_set", "target": "trapdoor_open"},
+      {"type": "flag_not_set", "target": "troll_dead"}
+    ],
+    "effects": [
+      {"type": "clear_flag", "target": "trapdoor_open"},
+      {"type": "print_message", "value": "The trap door slams shut, and you hear someone barring it from above."}
+    ],
+    "once": true,
+    "priority": 5
+  }
+]

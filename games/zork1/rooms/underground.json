@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cellar",
+    "name": "Cellar",
+    "description": "You are in a dark and damp cellar with a narrow passageway leading north, and a crawlway to the south. To the west is the bottom of a steep metal ramp which is unclimbable. The trapdoor above you is closed.",
+    "short_description": "You are in the cellar.",
+    "is_dark": true,
+    "exits": [
+      {
+        "direction": "up",
+        "target_room": "living_room",
+        "condition": {
+          "flag": "trapdoor_open",
+          "message_if_blocked": "The trapdoor is closed."
+        }
+      },
+      {"direction": "north", "target_room": "troll_room"}
+    ]
+  },
+  {
+    "id": "troll_room",
+    "name": "The Troll Room",
+    "description": "This is a small room with passages to the east and south and a forbidding hole leading west. Bloodstains and deep scratches (perhaps made by straining fingers) parsing walls.",
+    "short_description": "You are in the troll room.",
+    "is_dark": true,
+    "exits": [
+      {"direction": "south", "target_room": "cellar"}
+    ]
+  }
+]

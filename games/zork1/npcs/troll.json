@@ -1,0 +1,22 @@
+{
+  "id": "troll",
+  "name": "troll",
+  "aliases": ["nasty troll"],
+  "description": "A nasty-looking troll, brandishing a bloody axe, blocks all passages out of the room.",
+  "location": "troll_room",
+  "attitude": "hostile",
+  "health": 10,
+  "max_health": 10,
+  "damage": 3,
+  "behavior": {
+    "wanders": false,
+    "blocks_exit": "north",
+    "combat_messages": {
+      "counter": "The troll swings his axe and hits you!",
+      "miss": "The troll swings his axe and misses!",
+      "hit": "The troll hits you with his axe!"
+    }
+  },
+  "death_message": "The troll staggers back and falls dead, dropping his axe.",
+  "death_flag": "troll_dead"
+}

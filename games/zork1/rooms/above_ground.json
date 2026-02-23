@@ -1,0 +1,81 @@
+[
+  {
+    "id": "west_of_house",
+    "name": "West of House",
+    "description": "You are standing in an open field west of a white house, with a boarded front door.",
+    "short_description": "You are west of the white house.",
+    "exits": [
+      {"direction": "north", "target_room": "north_of_house"},
+      {"direction": "south", "target_room": "south_of_house"},
+      {"direction": "west", "target_room": "forest_west"}
+    ]
+  },
+  {
+    "id": "north_of_house",
+    "name": "North of House",
+    "description": "You are facing the north side of a white house. There is no door here, and all the windows are boarded up. To the north a narrow path winds through the trees.",
+    "short_description": "You are north of the white house.",
+    "exits": [
+      {"direction": "west", "target_room": "west_of_house"},
+      {"direction": "east", "target_room": "behind_house"},
+      {"direction": "north", "target_room": "forest_path"}
+    ]
+  },
+  {
+    "id": "south_of_house",
+    "name": "South of House",
+    "description": "You are facing the south side of a white house. There is no door here, and all the windows are boarded.",
+    "short_description": "You are south of the white house.",
+    "exits": [
+      {"direction": "west", "target_room": "west_of_house"},
+      {"direction": "east", "target_room": "behind_house"}
+    ]
+  },
+  {
+    "id": "behind_house",
+    "name": "Behind House",
+    "description": "You are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar.",
+    "short_description": "You are behind the white house.",
+    "exits": [
+      {"direction": "north", "target_room": "north_of_house"},
+      {"direction": "south", "target_room": "south_of_house"},
+      {"direction": "east", "target_room": "clearing"},
+      {
+        "direction": "in",
+        "target_room": "kitchen",
+        "description": "through the window"
+      }
+    ]
+  },
+  {
+    "id": "forest_path",
+    "name": "Forest Path",
+    "description": "This is a path winding through a dimly lit forest. The path heads north-south here. One particularly large tree with some low branches stands at the edge of the path.",
+    "short_description": "You are on a forest path.",
+    "exits": [
+      {"direction": "south", "target_room": "north_of_house"},
+      {"direction": "north", "target_room": "clearing"},
+      {"direction": "east", "target_room": "forest_west"}
+    ]
+  },
+  {
+    "id": "forest_west",
+    "name": "Forest",
+    "description": "This is a dimly lit forest, with large trees all around.",
+    "short_description": "You are in a forest.",
+    "exits": [
+      {"direction": "east", "target_room": "west_of_house"},
+      {"direction": "north", "target_room": "forest_path"}
+    ]
+  },
+  {
+    "id": "clearing",
+    "name": "Clearing",
+    "description": "You are in a small clearing in a well marked forest path that extends to the east and west.",
+    "short_description": "You are in a clearing.",
+    "exits": [
+      {"direction": "south", "target_room": "forest_path"},
+      {"direction": "west", "target_room": "forest_west"}
+    ]
+  }
+]

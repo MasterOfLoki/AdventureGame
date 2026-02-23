@@ -1,0 +1,40 @@
+[
+  {
+    "id": "kitchen",
+    "name": "Kitchen",
+    "description": "You are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward. A dark chimney leads down and to the east is a small window which is open.",
+    "short_description": "You are in the kitchen.",
+    "exits": [
+      {"direction": "west", "target_room": "living_room"},
+      {"direction": "up", "target_room": "attic"},
+      {"direction": "east", "target_room": "behind_house"}
+    ]
+  },
+  {
+    "id": "living_room",
+    "name": "Living Room",
+    "description": "You are in the living room. There is a doorway to the east, and a wooden door with strange gothic lettering to the west, which appears to be nailed shut. Above the trophy case hangs an elvish sword of great antiquity. A rug is spread on the floor.",
+    "short_description": "You are in the living room.",
+    "exits": [
+      {"direction": "east", "target_room": "kitchen"},
+      {
+        "direction": "down",
+        "target_room": "cellar",
+        "condition": {
+          "flag": "trapdoor_open",
+          "message_if_blocked": "You can't go that way."
+        },
+        "hidden": true
+      }
+    ]
+  },
+  {
+    "id": "attic",
+    "name": "Attic",
+    "description": "This is the attic. The only exit is a stairway leading down. A large coil of rope is lying in the corner. On a table is a nasty-looking knife.",
+    "short_description": "You are in the attic.",
+    "exits": [
+      {"direction": "down", "target_room": "kitchen"}
+    ]
+  }
+]
