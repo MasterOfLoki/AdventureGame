@@ -203,18 +203,23 @@ class GameEngine:
         """Build context for the parser with visible objects, exits, etc."""
         room = self.world.get_room(self.state.current_room)
 
-        # Visible objects
+        # Visible objects and their aliases
         visible = []
+        aliases: dict[str, list[str]] = {}
         for obj_id in self.state.objects_in_room(self.state.current_room):
             obj = self.world.get_object(obj_id)
             if obj and not self.state.has_object_property(obj_id, ObjectProperty.HIDDEN):
                 visible.append(obj.name)
+                if obj.aliases:
+                    aliases[obj.name] = list(obj.aliases)
                 # Also include contents of open containers
                 if self.state.has_object_property(obj_id, ObjectProperty.OPEN):
                     for child_id in self.state.objects_in_container(obj_id):
                         child = self.world.get_object(child_id)
                         if child:
                             visible.append(child.name)
+                            if child.aliases:
+                                aliases[child.name] = list(child.aliases)
 
         # Inventory names
         inv_names = []
@@ -222,6 +227,8 @@ class GameEngine:
             obj = self.world.get_object(obj_id)
             if obj:
                 inv_names.append(obj.name)
+                if obj.aliases:
+                    aliases[obj.name] = list(obj.aliases)
 
         # Exits
         exits = []
@@ -248,6 +255,7 @@ class GameEngine:
             exits=exits,
             valid_verbs=verb_names,
             npc_names=npc_names,
+            object_aliases=aliases,
         )
 
     def _handle_meta_command(self, command: ParsedCommand) -> str | None:

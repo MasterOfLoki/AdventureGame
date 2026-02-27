@@ -17,12 +17,14 @@ class ParserContext:
         exits: list[str] | None = None,
         valid_verbs: list[str] | None = None,
         npc_names: list[str] | None = None,
+        object_aliases: dict[str, list[str]] | None = None,
     ):
         self.visible_objects = visible_objects or []
         self.inventory = inventory or []
         self.exits = exits or []
         self.valid_verbs = valid_verbs or []
         self.npc_names = npc_names or []
+        self.object_aliases = object_aliases or {}
 
 
 class ParserInterface(ABC):
